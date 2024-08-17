@@ -11,6 +11,7 @@ func initRoutes(r *gin.Engine) {
 	r.GET("/chat", handleRoute(views.SEOHelperAIChat()))
 
 	r.Static("/public", "./assets")
+	r.StaticFile("robots.txt", "./assets/robots.txt")
 }
 
 func handleRoute(c templ.Component) gin.HandlerFunc {
