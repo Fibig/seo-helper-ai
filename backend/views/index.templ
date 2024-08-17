@@ -1,16 +1,10 @@
 package views
 
-import "github.com/Fibig/seo-helper-ai/components"
+import "github.com/Fibig/seo-helper-ai/layouts"
 
-templ Index() {
-    <!DOCTYPE html>
-    <html>
-        @components.Header()
-        <body>
-            <main>
-                Bomboclat2322sasasasasaaaaaaa
-            </main>
-        </body>
-        @components.Footer()
-    </html>
+templ Index(textinger string) {
+    @layouts.Base("SEO Helper AI") {
+        <img src="/public/kleinergo.png" />
+        {textinger}
+    }
 }
