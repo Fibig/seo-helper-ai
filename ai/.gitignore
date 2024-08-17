@@ -1,3 +1,4 @@
 !ollama/
 ollama/*
 !ollama/Modelfile
+!ollama/start.sh

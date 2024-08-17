@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  seo-helper-ai:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    container_name: seo-helper-ai
+    env_file:
+      - .env
+    ports:
+      - 9000:9000

@@ -7,14 +7,19 @@ import (
 )
 
 func initRoutes(r *gin.Engine) {
-	r.GET("/", handleRoute(views.Index("hey")))
-	r.GET("/chat", handleRoute(views.SEOHelperAIChat()))
+	// WEB
+	r.GET("/", handleRouteTemplComponent(views.Index("hey")))
+	r.GET("/chat", handleRouteTemplComponent(views.SEOHelperAIChat()))
 
 	r.Static("/public", "./assets")
 	r.StaticFile("robots.txt", "./assets/robots.txt")
+
+	// API
+	api := r.Group("/api")
+	api.GET("/chat", chatWithAI())
 }
 
-func handleRoute(c templ.Component) gin.HandlerFunc {
+func handleRouteTemplComponent(c templ.Component) gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		c.Render(ctx.Request.Context(), ctx.Writer)
 	}

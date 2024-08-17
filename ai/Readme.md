@@ -1,0 +1,1 @@
+docker exec -it ollama ollama create seo-helper-ai:latest -f /root/.ollama/Modelfile
