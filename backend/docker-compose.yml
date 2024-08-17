@@ -1,10 +1,11 @@
-version: "3.9"
+name: seo-helper-ai-backend
+
 services:
-  seo-helper-ai:
+  seo-helper-ai-backend:
     build:
         context: .
         dockerfile: Dockerfile
-    container_name: seo-helper-ai
+    container_name: seo-helper-ai-backend
     env_file:
       - .env
     ports:

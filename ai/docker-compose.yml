@@ -1,4 +1,5 @@
-version: '3'
+name: seo-helper-ai-ollama
+
 services:
   ollama:
     volumes:
