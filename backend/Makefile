@@ -1,5 +1,13 @@
 run:
 	air
 
-watch:
+watch_templ:
 	templ generate -watch
+
+watch_css:
+	npx tailwindcss -i ./css/tailwind.css -o ./assets/tailwind.css --watch
+
+build:
+	templ generate
+	npx tailwindcss -i ./css/tailwind.css -o ./assets/tailwind.css
+	go build -o ./bin/main.exe ./cmd/seo-helper-ai/main.go
