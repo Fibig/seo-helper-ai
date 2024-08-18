@@ -2,13 +2,7 @@ tmp
 bin
 .env
 
-components/*.txt
-components/*.go
+*templ.go
+*templ.txt
 
-views/*.txt
-views/*.go
-
-layouts/*.txt
-layouts/*.go
-
-assets/tailwind.css
+public/css/tailwind.css

@@ -11,8 +11,8 @@ func initRoutes(r *gin.Engine) {
 	r.GET("/", handleRouteTemplComponent(views.Index("hey")))
 	r.GET("/chat", handleRouteTemplComponent(views.SEOHelperAIChat()))
 
-	r.Static("/public", "./assets")
-	r.StaticFile("robots.txt", "./assets/robots.txt")
+	r.Static("/public", "./public")
+	r.StaticFile("robots.txt", "./public/robots.txt")
 
 	// API
 	api := r.Group("/api")
