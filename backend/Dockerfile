@@ -18,7 +18,7 @@ COPY . .
 
 # build everything
 RUN templ generate
-RUN tailwindcss -i ./css/tailwind.css -o ./assets/tailwind.css
+RUN ./tailwindcss -i ./css/tailwind.css -o ./assets/tailwind.css
 RUN go build -o ./bin/main ./cmd/seo-helper-ai/main.go
 
 EXPOSE 9000
