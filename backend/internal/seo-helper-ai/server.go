@@ -1,11 +1,14 @@
 package seohelperai
 
 import (
+	"os"
+
 	"github.com/gin-gonic/gin"
 )
 
 func NewServer() *gin.Engine {
-	r := gin.Default()
+	gin.SetMode(os.Getenv("GIN_MODE"))
+	r := gin.New()
 
 	initRoutes(r)
 

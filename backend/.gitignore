@@ -1,3 +1,6 @@
 tmp
 bin
 .env
+
+internal/**/templates/**/*templ.txt
+internal/**/templates/**/*templ.go
