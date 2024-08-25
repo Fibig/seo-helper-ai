@@ -1,0 +1,29 @@
+package views
+
+import "github.com/Fibig/seo-helper-ai/internal/seo-helper-ai/templates/layouts"
+
+templ Generate() {
+    @layouts.Base("Generate - SEO Helper AI")   {
+        <section class="container mt-8 space-y-4 mx-auto">
+            <h1 class="text-4xl">Generate Content</h1>
+
+            <form
+                class="flex flex-col gap-2"
+                hx-target="#response"
+                hx-post="/api/generate"
+            >
+                <textarea name="prompt" class="border rounded-md p-4 max-h-96 h-48"></textarea>
+                <button
+                    type="submit"
+                    class="bg-black text-white py-2 px-6 w-fit ml-auto"
+                >
+                    Submit
+                </button>
+            </form>
+
+            <div class="border w-full p-4">
+                <p class="whitespace-pre-line break-words" id="response"></p>
+            </div>
+        </section>
+    }
+}

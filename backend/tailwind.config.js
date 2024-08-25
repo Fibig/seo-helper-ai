@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.{html,templ,go}"],
+  content: ["internal/seo-helper-ai/templates/**/*.templ"],
 }
 
